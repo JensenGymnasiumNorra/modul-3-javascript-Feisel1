@@ -8,6 +8,12 @@
   <body>
     <!-- TODO: Lägg till 5 knappar, där en är korrekt och 4 är inkorrekta -->
   </body>
+  
+  <button onclick="showCorrect()">klicka </button>
+  <button onclick="showIncorrect()">klicka</button>
+  <button onclick="show()">klicka</button>
+  <button onclick="showIncorrect()">klicka</button>
+  <button onclick="showIncorrect()">klicka</button>
 
   <script>
     function showCorrect() {
@@ -16,6 +22,10 @@
 
     function showIncorrect() {
       alert("Incorrect!");
+    }
+
+    function show() {
+      alert("Nej!");
     }
   </script>
 </html>

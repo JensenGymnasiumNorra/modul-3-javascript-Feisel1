@@ -7,19 +7,35 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator Example</title>
+    <meta name="viewport" href="simple_calculator.js" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator - Sliders</title>
   </head>
   <body>
-    <input type="text" id="num1" placeholder="Enter number 1" />
-    <input type="text" id="num2" placeholder="Enter number 2" />
+    <label for="num1">Tal 1: <span id="val1"></span></label><br />
+    <input type="range" id="num1" min="-100" max="100" step="1" value="50" oninput="updateSliderValue('num1','val1')" />
     <br /><br />
-    <button onclick="calculateSum()">+</button>
+
+    <label for="num2">Tal 2: <span id="val2"></span></label><br />
+    <input type="range" id="num2" min="-100" max="100" step="1" value="25" oninput="updateSliderValue('num2','val2')" />
+    <br /><br />
+
+    <label for="operator">Välj räknesätt:</label>
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <button onclick="calculate()">Beräkna</button>
 
     <p id="result">Result:</p>
+
+    
+
+    <script src="simple_calculator.js"></script>
   </body>
-  <script src="simple_calculator.js"></script>
 </html>

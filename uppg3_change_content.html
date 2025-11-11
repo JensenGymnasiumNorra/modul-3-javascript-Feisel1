@@ -13,11 +13,25 @@
   <body>
     <button onclick="showCarbonara()">Show carbonara ingredients</button>
     <button onclick="showPizza()">Show pizza ingredients</button>
+    <button onclick="clearIngredients()">Clear ingredients</button>
 
     <div id="ingredients"></div>
 
     <script>
       // TODO: Skapa funktionerna showCarbonara() och showPizza() för att visa ingredienserna för respektive recept i diven ingredients
+      function showCarbonara() {
+        const ingredientsDiv = document.getElementById("ingredients");
+        ingredientsDiv.innerHTML = "<h2>Carbonara Ingredients</h2><ul><li>Pasta</li><li>Eggs</li><li>Pancetta</li><li>Parmesan cheese</li><li>Black pepper</li></ul>";
+
+      }
+      function showPizza() {
+        const ingredientsDiv = document.getElementById("ingredients");
+        ingredientsDiv.innerHTML = "<h2>Pizza Ingredients</h2><ul><li>Pizza dough</li><li>Tomato sauce</li><li>Mozzarella cheese</li><li>Pepperoni</li><li>Basil</li></ul>";
+      }
+      function clearIngredients() {
+        const ingredientsDiv = document.getElementById("ingredients");
+        ingredientsDiv.innerHTML = "";
+      }
     </script>
   </body>
 </html>
